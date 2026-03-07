@@ -1,9 +1,9 @@
-function DecisionTask({ agentName, onDecision }) {
+function DecisionTask({ agentName, trial, onDecision }) {
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
       <h2>{agentName} Recommendation</h2>
 
-      <p>Choose the better product based on ratings.</p>
+      <p>Trial {trial.id} of 5</p>
 
       <div>
         <h4>Product A</h4>
@@ -15,14 +15,14 @@ function DecisionTask({ agentName, onDecision }) {
         <p>Rating: 4.2 / 5</p>
       </div>
 
-      <h3>AI recommends: Product B</h3>
+      <h3>AI recommends: Product {trial.aiRecommendation}</h3>
 
       <button onClick={() => onDecision("accept")}>
         Accept Recommendation
       </button>
 
       <button onClick={() => onDecision("override")}>
-        Choose Product A Instead
+        Override AI
       </button>
     </div>
   );
