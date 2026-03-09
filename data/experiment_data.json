@@ -1,0 +1,56 @@
+[
+  {
+    "participant_id": "P_a2wvu4lg",
+    "trial_number": 1,
+    "condition": "humanlike",
+    "decision": "accept",
+    "latency_ms": 2476,
+    "ai_correct": false,
+    "confidence_score": 3,
+    "timestamp": "2026-03-09T05:54:14.455Z"
+  },
+  {
+    "participant_id": "P_a2wvu4lg",
+    "trial_number": 2,
+    "condition": "humanlike",
+    "decision": "override",
+    "latency_ms": 1245,
+    "ai_correct": true,
+    "confidence_score": 5,
+    "timestamp": "2026-03-09T05:54:18.521Z"
+  },
+  {
+    "participant_id": "P_a2wvu4lg",
+    "trial_number": 3,
+    "condition": "humanlike",
+    "decision": "accept",
+    "latency_ms": 1480,
+    "ai_correct": false,
+    "confidence_score": 2,
+    "timestamp": "2026-03-09T05:54:22.739Z"
+  },
+  {
+    "participant_id": "P_a2wvu4lg",
+    "trial_number": 4,
+    "condition": "humanlike",
+    "decision": "override",
+    "latency_ms": 1363,
+    "ai_correct": true,
+    "confidence_score": 5,
+    "timestamp": "2026-03-09T05:54:26.205Z"
+  },
+  {
+    "participant_id": "P_a2wvu4lg",
+    "trial_number": 5,
+    "condition": "humanlike",
+    "decision": "accept",
+    "latency_ms": 1446,
+    "ai_correct": false,
+    "confidence_score": 5,
+    "timestamp": "2026-03-09T05:54:30.071Z"
+  },
+  {
+    "participant_id": "P_a2wvu4lg",
+    "manipulation_check": "Alex"
+  }
+]
