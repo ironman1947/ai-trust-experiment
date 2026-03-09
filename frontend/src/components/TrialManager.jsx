@@ -17,10 +17,14 @@ function TrialManager() {
 
   const [decisionData, setDecisionData] = useState(null);
   const [confidence, setConfidence] = useState(3);
+  const [events, setEvents] = useState([]);
+
+  const [showManipulationCheck, setShowManipulationCheck] = useState(false);
+  const [manipulationAnswer, setManipulationAnswer] = useState("");
+
+  const trial = trials[trialIndex];
 
   const handleDecision = (decision, latency) => {
-
-    const trial = trials[trialIndex];
 
     setDecisionData({
       participant_id: participantID,
@@ -40,6 +44,8 @@ function TrialManager() {
       timestamp: new Date().toISOString()
     };
 
+    setEvents((prev) => [...prev, event]);
+
     console.log("Experiment Event:", event);
 
     if (trialIndex < trials.length - 1) {
@@ -47,13 +53,76 @@ function TrialManager() {
       setDecisionData(null);
       setConfidence(3);
     } else {
-      alert("Experiment complete!");
+      setShowManipulationCheck(true);
     }
   };
 
-  const trial = trials[trialIndex];
+  const downloadData = (data) => {
+
+    const json = JSON.stringify(data, null, 2);
+
+    const blob = new Blob([json], {
+      type: "application/json"
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "experiment_data.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
+  };
+
+  if (showManipulationCheck) {
+
+    return (
+      <div style={{ padding: "40px", fontFamily: "Arial" }}>
+        <h2>Manipulation Check</h2>
+
+        <p>
+          What was the name of the AI assistant you interacted with?
+        </p>
+
+        <select
+          value={manipulationAnswer}
+          onChange={(e) =>
+            setManipulationAnswer(e.target.value)
+          }
+        >
+          <option value="">Select</option>
+          <option value="AI System">AI System</option>
+          <option value="Alex">Alex</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+
+        <br /><br />
+
+        <button
+          onClick={() => {
+
+            const finalData = [
+              ...events,
+              {
+                participant_id: participantID,
+                manipulation_check: manipulationAnswer
+              }
+            ];
+
+            downloadData(finalData);
+
+            alert("Experiment complete. Data downloaded.");
+          }}
+        >
+          Submit
+        </button>
+      </div>
+    );
+  }
 
   if (decisionData) {
+
     return (
       <div style={{ padding: "40px", fontFamily: "Arial" }}>
         <h3>How confident are you in your decision?</h3>
@@ -63,7 +132,9 @@ function TrialManager() {
           min="1"
           max="5"
           value={confidence}
-          onChange={(e) => setConfidence(e.target.value)}
+          onChange={(e) =>
+            setConfidence(Number(e.target.value))
+          }
         />
 
         <p>Confidence: {confidence}</p>
