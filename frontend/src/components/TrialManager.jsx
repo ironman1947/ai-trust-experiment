@@ -15,31 +15,84 @@ function TrialManager() {
   const agentName =
     condition === "neutral" ? "AI System" : "Alex";
 
-  const handleDecision = (decision) => {
+  const [decisionData, setDecisionData] = useState(null);
+  const [confidence, setConfidence] = useState(3);
+
+  const handleDecision = (decision, latency) => {
 
     const trial = trials[trialIndex];
 
-    console.log({
+    setDecisionData({
       participant_id: participantID,
       trial_number: trial.id,
       condition: condition,
       decision: decision,
+      latency_ms: latency,
       ai_correct: trial.aiCorrect
     });
+  };
+
+  const submitTrial = () => {
+
+    const event = {
+      ...decisionData,
+      confidence_score: confidence,
+      timestamp: new Date().toISOString()
+    };
+
+    console.log("Experiment Event:", event);
 
     if (trialIndex < trials.length - 1) {
       setTrialIndex(trialIndex + 1);
+      setDecisionData(null);
+      setConfidence(3);
     } else {
       alert("Experiment complete!");
     }
   };
 
+  const trial = trials[trialIndex];
+
+  if (decisionData) {
+    return (
+      <div style={{ padding: "40px", fontFamily: "Arial" }}>
+        <h3>How confident are you in your decision?</h3>
+
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value={confidence}
+          onChange={(e) => setConfidence(e.target.value)}
+        />
+
+        <p>Confidence: {confidence}</p>
+
+        <button onClick={submitTrial}>
+          Submit
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <DecisionTask
-      agentName={agentName}
-      trial={trials[trialIndex]}
-      onDecision={handleDecision}
-    />
+    <div style={{ padding: "40px", fontFamily: "Arial" }}>
+
+      <h1>AI Decision Experiment</h1>
+
+      <p>Participant ID: {participantID}</p>
+
+      <p>
+        Trial {trialIndex + 1} of {trials.length}
+      </p>
+
+      <DecisionTask
+        agentName={agentName}
+        trial={trial}
+        onDecision={handleDecision}
+      />
+
+    </div>
   );
 }
 

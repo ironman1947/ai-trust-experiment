@@ -1,4 +1,18 @@
+import { useState, useEffect } from "react";
+
 function DecisionTask({ agentName, trial, onDecision }) {
+
+  const [startTime, setStartTime] = useState(Date.now());
+
+  useEffect(() => {
+    setStartTime(Date.now());
+  }, [trial]);
+
+  const handleClick = (decision) => {
+    const latency = Date.now() - startTime;
+    onDecision(decision, latency);
+  };
+
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
       <h2>{agentName} Recommendation</h2>
@@ -17,11 +31,11 @@ function DecisionTask({ agentName, trial, onDecision }) {
 
       <h3>AI recommends: Product {trial.aiRecommendation}</h3>
 
-      <button onClick={() => onDecision("accept")}>
+      <button onClick={() => handleClick("accept")}>
         Accept Recommendation
       </button>
 
-      <button onClick={() => onDecision("override")}>
+      <button onClick={() => handleClick("override")}>
         Override AI
       </button>
     </div>
