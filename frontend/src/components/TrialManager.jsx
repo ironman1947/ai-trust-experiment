@@ -22,6 +22,8 @@ function TrialManager() {
   const [showManipulationCheck, setShowManipulationCheck] = useState(false);
   const [manipulationAnswer, setManipulationAnswer] = useState("");
 
+  const [experimentComplete, setExperimentComplete] = useState(false);
+
   const trial = trials[trialIndex];
 
   const handleDecision = (decision, latency) => {
@@ -75,6 +77,16 @@ function TrialManager() {
     URL.revokeObjectURL(url);
   };
 
+  if (experimentComplete) {
+    return (
+      <div style={{ padding: "40px", fontFamily: "Arial" }}>
+        <h1>Experiment Complete</h1>
+        <p>Thank you for participating in this study.</p>
+        <p>Your responses have been recorded successfully.</p>
+      </div>
+    );
+  }
+
   if (showManipulationCheck) {
 
     return (
@@ -112,7 +124,7 @@ function TrialManager() {
 
             downloadData(finalData);
 
-            alert("Experiment complete. Data downloaded.");
+            setExperimentComplete(true);
           }}
         >
           Submit
