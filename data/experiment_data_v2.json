@@ -1,0 +1,298 @@
+[
+  {
+    "participant_id": "P-7X2K9",
+    "trial_number": 1,
+    "condition_id": 3,
+    "assistant_name": "Alex",
+    "tone": "conversational",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 2341,
+    "confidence_score": 4,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 1200 },
+      { "action": "hover_product_b", "timestamp": 1890 },
+      { "action": "hover_accept", "timestamp": 2100 }
+    ],
+    "timestamp": "2026-03-18T09:14:22.000Z"
+  },
+  {
+    "participant_id": "P-7X2K9",
+    "trial_number": 2,
+    "condition_id": 3,
+    "assistant_name": "Alex",
+    "tone": "conversational",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 1876,
+    "confidence_score": 5,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_accept", "timestamp": 1600 }
+    ],
+    "timestamp": "2026-03-18T09:15:10.000Z"
+  },
+  {
+    "participant_id": "P-7X2K9",
+    "trial_number": 3,
+    "condition_id": 3,
+    "assistant_name": "Alex",
+    "tone": "conversational",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "override",
+    "latency_ms": 4521,
+    "confidence_score": 2,
+    "ai_correct": false,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 800 },
+      { "action": "hover_product_b", "timestamp": 1600 },
+      { "action": "hover_accept", "timestamp": 2400 },
+      { "action": "hover_override", "timestamp": 3800 }
+    ],
+    "timestamp": "2026-03-18T09:16:05.000Z"
+  },
+  {
+    "participant_id": "P-7X2K9",
+    "trial_number": 4,
+    "condition_id": 3,
+    "assistant_name": "Alex",
+    "tone": "conversational",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 2102,
+    "confidence_score": 4,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 1100 },
+      { "action": "hover_accept", "timestamp": 1900 }
+    ],
+    "timestamp": "2026-03-18T09:17:00.000Z"
+  },
+  {
+    "participant_id": "P-7X2K9",
+    "trial_number": 5,
+    "condition_id": 3,
+    "assistant_name": "Alex",
+    "tone": "conversational",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 1654,
+    "confidence_score": 4,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_accept", "timestamp": 1400 }
+    ],
+    "timestamp": "2026-03-18T09:17:55.000Z"
+  },
+  {
+    "participant_id": "P-7X2K9",
+    "manipulation_check": "Alex",
+    "visual_check": "Human face",
+    "timestamp": "2026-03-18T09:18:30.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "trial_number": 1,
+    "condition_id": 12,
+    "assistant_name": "AI System",
+    "tone": "technical",
+    "confidence_framing": "neutral",
+    "visual_identity": "icon",
+    "decision": "override",
+    "latency_ms": 5832,
+    "confidence_score": 2,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 900 },
+      { "action": "hover_product_b", "timestamp": 2100 },
+      { "action": "hover_accept", "timestamp": 3400 },
+      { "action": "hover_product_a", "timestamp": 4200 },
+      { "action": "hover_override", "timestamp": 5600 }
+    ],
+    "timestamp": "2026-03-18T10:02:14.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "trial_number": 2,
+    "condition_id": 12,
+    "assistant_name": "AI System",
+    "tone": "technical",
+    "confidence_framing": "neutral",
+    "visual_identity": "icon",
+    "decision": "override",
+    "latency_ms": 6104,
+    "confidence_score": 2,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_b", "timestamp": 1200 },
+      { "action": "hover_product_a", "timestamp": 2800 },
+      { "action": "hover_override", "timestamp": 5800 }
+    ],
+    "timestamp": "2026-03-18T10:03:20.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "trial_number": 3,
+    "condition_id": 12,
+    "assistant_name": "AI System",
+    "tone": "technical",
+    "confidence_framing": "neutral",
+    "visual_identity": "icon",
+    "decision": "accept",
+    "latency_ms": 3210,
+    "confidence_score": 3,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 1400 },
+      { "action": "hover_accept", "timestamp": 3000 }
+    ],
+    "timestamp": "2026-03-18T10:04:15.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "trial_number": 4,
+    "condition_id": 12,
+    "assistant_name": "AI System",
+    "tone": "technical",
+    "confidence_framing": "neutral",
+    "visual_identity": "icon",
+    "decision": "override",
+    "latency_ms": 7430,
+    "confidence_score": 1,
+    "ai_correct": false,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 600 },
+      { "action": "hover_product_b", "timestamp": 1800 },
+      { "action": "hover_accept", "timestamp": 3200 },
+      { "action": "hover_product_b", "timestamp": 5100 },
+      { "action": "hover_override", "timestamp": 7100 }
+    ],
+    "timestamp": "2026-03-18T10:05:10.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "trial_number": 5,
+    "condition_id": 12,
+    "assistant_name": "AI System",
+    "tone": "technical",
+    "confidence_framing": "neutral",
+    "visual_identity": "icon",
+    "decision": "override",
+    "latency_ms": 5980,
+    "confidence_score": 2,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_b", "timestamp": 2200 },
+      { "action": "hover_override", "timestamp": 5700 }
+    ],
+    "timestamp": "2026-03-18T10:06:00.000Z"
+  },
+  {
+    "participant_id": "P-4M8R1",
+    "manipulation_check": "AI System",
+    "visual_check": "Machine icon",
+    "timestamp": "2026-03-18T10:06:45.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "trial_number": 1,
+    "condition_id": 7,
+    "assistant_name": "Alex",
+    "tone": "technical",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 2890,
+    "confidence_score": 4,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 1100 },
+      { "action": "hover_accept", "timestamp": 2700 }
+    ],
+    "timestamp": "2026-03-18T11:20:00.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "trial_number": 2,
+    "condition_id": 7,
+    "assistant_name": "Alex",
+    "tone": "technical",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 2100,
+    "confidence_score": 5,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_accept", "timestamp": 1900 }
+    ],
+    "timestamp": "2026-03-18T11:21:00.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "trial_number": 3,
+    "condition_id": 7,
+    "assistant_name": "Alex",
+    "tone": "technical",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 1980,
+    "confidence_score": 4,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 800 },
+      { "action": "hover_accept", "timestamp": 1800 }
+    ],
+    "timestamp": "2026-03-18T11:22:00.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "trial_number": 4,
+    "condition_id": 7,
+    "assistant_name": "Alex",
+    "tone": "technical",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "accept",
+    "latency_ms": 1750,
+    "confidence_score": 5,
+    "ai_correct": true,
+    "action_sequence": [
+      { "action": "hover_accept", "timestamp": 1600 }
+    ],
+    "timestamp": "2026-03-18T11:23:00.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "trial_number": 5,
+    "condition_id": 7,
+    "assistant_name": "Alex",
+    "tone": "technical",
+    "confidence_framing": "certain",
+    "visual_identity": "avatar",
+    "decision": "override",
+    "latency_ms": 4200,
+    "confidence_score": 2,
+    "ai_correct": false,
+    "action_sequence": [
+      { "action": "hover_product_a", "timestamp": 700 },
+      { "action": "hover_product_b", "timestamp": 1900 },
+      { "action": "hover_accept", "timestamp": 2800 },
+      { "action": "hover_override", "timestamp": 4000 }
+    ],
+    "timestamp": "2026-03-18T11:24:00.000Z"
+  },
+  {
+    "participant_id": "P-9L3T5",
+    "manipulation_check": "Alex",
+    "visual_check": "Human face",
+    "timestamp": "2026-03-18T11:24:45.000Z"
+  }
+]
