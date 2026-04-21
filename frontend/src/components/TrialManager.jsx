@@ -3,6 +3,7 @@ import DecisionTask from "./DecisionTask";
 import { useCondition } from "./ConditionProvider";
 import { trials } from "../data/trials";
 import { generateParticipantID } from "../utils/participantID";
+import { logEvent } from "../utils/api";
 
 function TrialManager() {
   const { condition } = useCondition();

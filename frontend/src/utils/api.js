@@ -69,3 +69,21 @@ export default {
   apiGet,
   getApiUrl,
 };
+// ... keep your apiPost, apiGet, etc. above ...
+
+// Specific API calls for the Trust Experiment
+export const logEvent = (eventData) => {
+  return apiPost('/log-event', eventData);
+};
+
+export const startSession = (sessionData) => {
+  return apiPost('/session/start', sessionData);
+};
+
+export default {
+  apiPost,
+  apiGet,
+  getApiUrl,
+  logEvent,
+  startSession
+};
