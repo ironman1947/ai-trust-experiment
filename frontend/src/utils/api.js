@@ -64,13 +64,6 @@ export const apiGet = async (endpoint) => {
 
 export const getApiUrl = () => API_URL;
 
-export default {
-  apiPost,
-  apiGet,
-  getApiUrl,
-};
-// ... keep your apiPost, apiGet, etc. above ...
-
 // Specific API calls for the Trust Experiment
 export const logEvent = (eventData) => {
   return apiPost('/log-event', eventData);
@@ -80,6 +73,7 @@ export const startSession = (sessionData) => {
   return apiPost('/session/start', sessionData);
 };
 
+// ✅ Only ONE export default at the very bottom!
 export default {
   apiPost,
   apiGet,
