@@ -9,8 +9,14 @@ Tables:
 
 import sqlite3
 from typing import List, Dict
+import os
+from pathlib import Path
 
-DB_PATH = "experiment.db"
+# Load database path from environment or use default
+DB_PATH = os.getenv("DATABASE_PATH", "experiment.db")
+
+# Create data directory if it doesn't exist
+Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
 
 
 def get_connection():

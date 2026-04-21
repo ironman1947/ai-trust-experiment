@@ -15,9 +15,14 @@ from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime
 import json
+import os
+from dotenv import load_dotenv
 
 from database import init_db, save_event, save_session, get_all_events
 from anonymizer import hash_participant_id
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = FastAPI(
     title="AI Trust Experiment API",
@@ -25,16 +30,24 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Load CORS settings from environment
+allowed_origins = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:5173,http://localhost:3000"
+).split(",")
+
+# Clean up whitespace in origins
+allowed_origins = [origin.strip() for origin in allowed_origins]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 init_db()
-
 
 class SessionStartRequest(BaseModel):
     participant_id: str
